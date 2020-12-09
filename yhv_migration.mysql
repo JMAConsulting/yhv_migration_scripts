@@ -1,4 +1,18 @@
 
+INSERT INTO `civicrm_relationship_type` VALUES 
+(10,'Supervised by','Supervisor','Individual','Individual',NULL,NULL,0,1,'Supervised by','Supervisor','Immediate workplace supervisor'),
+(11,'Shared primary email','Shared primary email','Individual','Individual',NULL,NULL,NULL,1,'Shared primary email','Shared primary email',NULL),
+(12,'Child 子／女','Child 子／女',NULL,NULL,NULL,NULL,NULL,1,'Child 子／女','Child 子／女',NULL),
+(13,'Friend 朋友','Friend 朋友',NULL,NULL,NULL,NULL,NULL,1,'Friend 朋友','Friend 朋友',NULL),
+(14,'Grandchild 孫子／孫女','Grandparent 祖父／祖母',NULL,NULL,NULL,NULL,NULL,1,'Grandchild 孫子／孫女','Grandparent 祖父／祖母',NULL),
+(15,'Guardian 監護人','Guardian 監護人',NULL,NULL,NULL,NULL,NULL,1,'Guardian 監護人','Guardian 監護人',NULL),(16,'Parent 父／母','Parent 父／母',NULL,NULL,NULL,NULL,NULL,1,'Parent 父／母','Parent 父／母',NULL),
+(17,'Partner 伴侶','Partner 伴侶',NULL,NULL,NULL,NULL,NULL,1,'Partner 伴侶','Partner 伴侶',NULL),
+(18,'Relative 親戚','Relative 親戚',NULL,NULL,NULL,NULL,NULL,1,'Relative 親戚','Relative 親戚',NULL),
+(19,'Sibling 兄弟姊妹','Sibling 兄弟姊妹',NULL,NULL,NULL,NULL,NULL,1,'Sibling 兄弟姊妹','Sibling 兄弟姊妹',NULL),
+(20,'Spouse 配偶','Spouse 配偶',NULL,NULL,NULL,NULL,NULL,1,'Spouse 配偶','Spouse 配偶',NULL),
+(21,'Volunteer From','Provides Volunteer','Individual','Organization','Volunteer',NULL,NULL,1,'Volunteer From','Provides Volunteer',NULL),
+(22,'Grandparent 祖父／祖母','Grandchild 孫子／孫女',NULL,NULL,NULL,NULL,NULL,1,'Grandparent 祖父／祖母','Grandchild 孫子／孫女',NULL);
+
 INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label`) VALUES
  (2,55,'Volunteer',1,'Volunteer'),
  (2,56,'volunteer_commendation',1,'Volunteer Award'),
