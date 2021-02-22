@@ -12,19 +12,19 @@ INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a
 ('Volunteer From', 'Provides Volunteer', 'Individual', 'Organization', 'Volunteer', NULL, NULL, 1, 'Volunteer From', 'Provides Volunteer', NULL),
 ('Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL, NULL, NULL, NULL, NULL, 1, 'Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL);
 
-INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label`) VALUES
- (2,55,'Volunteer',1,'Volunteer'),
- (2,56,'volunteer_commendation',1,'Volunteer Award'),
- (2,57,'Reimbursed for Police Check',1,'Reimbursed for Police Check'),
- (2,58,'Reimbursed for TB Check',1, 'Reimbursed for TB Check'),
- (2,59,'Volunteer Request',1,'Volunteer Request'),
- (2,60,'Volunteer Application',1,'Volunteer Application'),
- (2,61,'Volunteer Work Hours',1,'Volunteer Work Hours'),
- (2,62,'Police Check',1,'Police Check'),
- (2,63,'TB Check',1,'TB Check'),
- (2,64,'Orientation Session',1,'Orientation Session'),
- (2,65,'HPCO Training (Hospice)',1,'HPCO Training (Hospice)'),
- (2,66,'Covid Test',1,'Covid Test');
+INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label_en_US`, `weight`) VALUES
+ (2,55,'Volunteer',1,'Volunteer', 57),
+ (2,56,'volunteer_commendation',1,'Volunteer Award', 58),
+ (2,57,'Reimbursed for Police Check',1,'Reimbursed for Police Check', 59),
+ (2,58,'Reimbursed for TB Check',1, 'Reimbursed for TB Check', 60),
+ (2,59,'Volunteer Request',1,'Volunteer Request', 61),
+ (2,60,'Volunteer Application',1,'Volunteer Application', 62),
+ (2,61,'Volunteer Work Hours',1,'Volunteer Work Hours', 63),
+ (2,62,'Police Check',1,'Police Check', 64),
+ (2,63,'TB Check',1,'TB Check', 65),
+ (2,64,'Orientation Session',1,'Orientation Session', 66),
+ (2,65,'HPCO Training (Hospice)',1,'HPCO Training (Hospice)', 67),
+ (2,66,'Covid Test',1,'Covid Test', 68);
 
 INSERT INTO `civicrm_custom_group` (
 `name`,
