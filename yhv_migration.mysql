@@ -1,14 +1,16 @@
 
-INSERT INTO `civicrm_relationship_type` (name_a_b`, `label_a_b`, `name_b_a`, `label_b_a`, `description`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`)  VALUES 
-('Grandchild 孫子／孫女','Grandparent 祖父／祖母',NULL,NULL,NULL,NULL,NULL,1,'Grandchild 孫子／孫女','Grandparent 祖父／祖母',NULL),
-('Guardian 監護人','Guardian 監護人',NULL,NULL,NULL,NULL,NULL,1,'Guardian 監護人','Guardian 監護人',NULL),
-('Parent 父／母','Parent 父／母',NULL,NULL,NULL,NULL,NULL,1,'Parent 父／母','Parent 父／母',NULL),
-('Partner 伴侶','Partner 伴侶',NULL,NULL,NULL,NULL,NULL,1,'Partner 伴侶','Partner 伴侶',NULL),
-('Relative 親戚','Relative 親戚',NULL,NULL,NULL,NULL,NULL,1,'Relative 親戚','Relative 親戚',NULL),
-('Sibling 兄弟姊妹','Sibling 兄弟姊妹',NULL,NULL,NULL,NULL,NULL,1,'Sibling 兄弟姊妹','Sibling 兄弟姊妹',NULL),
-('Spouse 配偶','Spouse 配偶',NULL,NULL,NULL,NULL,NULL,1,'Spouse 配偶','Spouse 配偶',NULL),
-('Volunteer From','Provides Volunteer','Individual','Organization','Volunteer',NULL,NULL,1,'Volunteer From','Provides Volunteer',NULL),
-('Grandparent 祖父／祖母','Grandchild 孫子／孫女',NULL,NULL,NULL,NULL,NULL,1,'Grandparent 祖父／祖母','Grandchild 孫子／孫女',NULL);
+INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`, `label_a_b_en_US`, `label_b_a_en_US`, `description_en_US`) VALUES
+('Child 子／女', 'Child 子／女', NULL, NULL, NULL, NULL, NULL, 1, 'Child 子／女', 'Child 子／女', NULL),
+('Friend 朋友', 'Friend 朋友', NULL, NULL, NULL, NULL, NULL, 1, 'Friend 朋友', 'Friend 朋友', NULL),
+('Grandchild 孫子／孫女', 'Grandparent 祖父／祖母', NULL, NULL, NULL, NULL, NULL, 1, 'Grandchild 孫子／孫女', 'Grandparent 祖父／祖母', NULL),
+('Guardian 監護人', 'Guardian 監護人', NULL, NULL, NULL, NULL, NULL, 1, 'Guardian 監護人', 'Guardian 監護人', NULL),
+('Parent 父／母', 'Parent 父／母', NULL, NULL, NULL, NULL, NULL, 1, 'Parent 父／母', 'Parent 父／母', NULL),
+('Partner 伴侶', 'Partner 伴侶', NULL, NULL, NULL, NULL, NULL, 1, 'Partner 伴侶', 'Partner 伴侶', NULL),
+('Relative 親戚', 'Relative 親戚', NULL, NULL, NULL, NULL, NULL, 1, 'Relative 親戚', 'Relative 親戚', NULL),
+('Sibling 兄弟姊妹', 'Sibling 兄弟姊妹', NULL, NULL, NULL, NULL, NULL, 1, 'Sibling 兄弟姊妹', 'Sibling 兄弟姊妹', NULL),
+('Spouse 配偶', 'Spouse 配偶', NULL, NULL, NULL, NULL, NULL, 1, 'Spouse 配偶', 'Spouse 配偶', NULL),
+('Volunteer From', 'Provides Volunteer', 'Individual', 'Organization', 'Volunteer', NULL, NULL, 1, 'Volunteer From', 'Provides Volunteer', NULL),
+('Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL, NULL, NULL, NULL, NULL, 1, 'Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL);
 
 INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label`) VALUES
  (2,55,'Volunteer',1,'Volunteer'),
