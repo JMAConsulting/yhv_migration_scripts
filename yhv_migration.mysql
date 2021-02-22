@@ -50,12 +50,12 @@ INSERT INTO `civicrm_custom_group` (
 `icon`
 ) VALUES 
 ('Volunteer_Information','Individual',NULL,CONCAT(UNHEX('01'), 'Volunteer',UNHEX('01')),'Tab',0,2,1,'civicrm_value_volunteer_inf_9',0,NULL,NULL,0,NULL,NULL,0,1,'Volunteer Information','','','fa-handshake-o'),
-('volunteer_commendation','Activity',NULL,CONCAT(UNHEX('01'), '56',UNHEX('01')),'Inline',0,1,1,'civicrm_value_volunteer_com_10',0,NULL,NULL,0,NULL,NULL,1,1,'Volunteer Commendation',NULL,NULL,NULL),
-('Volunteer_Award','Activity',NULL,CONCAT(UNHEX('01'), '56',UNHEX('01')),'Inline',0,5,1,'civicrm_value_volunteer_awa_11',0,NULL,NULL,0,3,'2020-06-29 17:59:55',0,1,'Volunteer Award','','',NULL),
-('Volunteering','Activity',NULL,CONCAT(UNHEX('01'), '55',UNHEX('01'),'59',UNHEX('01')),'Inline',1,6,1,'civicrm_value_volunteering_12',0,NULL,NULL,0,3,'2020-06-30 00:49:20',0,1,'Volunteer Shift','','',NULL),
-('Volunteer_Work_Hours','Activity',NULL,CONCAT(UNHEX('01'), '55',UNHEX('01')),'Inline',1,7,0,'civicrm_value_volunteer_wor_13',0,NULL,NULL,0,2,'2020-09-16 02:38:09',0,1,'Volunteer Hours','','',NULL),
-('Volunteer_Request','Activity',NULL,CONCAT(UNHEX('01'), '59',UNHEX('01')),'Inline',1,8,1,'civicrm_value_volunteer_req_14',0,NULL,NULL,0,2,'2020-10-12 09:57:12',0,1,'Volunteer Request','','',''),
-('Police_Force','Activity',NULL,CONCAT(UNHEX('01'), '62',UNHEX('01')),'Inline',1,9,1,'civicrm_value_police_force_15',0,NULL,NULL,0,2,'2020-11-18 10:09:26',0,1,'Police Force','','','');
+('volunteer_commendation','Activity',NULL,CONCAT(UNHEX('01'), '58',UNHEX('01')),'Inline',0,1,1,'civicrm_value_volunteer_com_10',0,NULL,NULL,0,NULL,NULL,1,1,'Volunteer Commendation',NULL,NULL,NULL),
+('Volunteer_Award','Activity',NULL,CONCAT(UNHEX('01'), '58',UNHEX('01')),'Inline',0,5,1,'civicrm_value_volunteer_awa_11',0,NULL,NULL,0,3,'2020-06-29 17:59:55',0,1,'Volunteer Award','','',NULL),
+('Volunteering','Activity',NULL,CONCAT(UNHEX('01'), '57',UNHEX('01'),'61',UNHEX('01')),'Inline',1,6,1,'civicrm_value_volunteering_12',0,NULL,NULL,0,3,'2020-06-30 00:49:20',0,1,'Volunteer Shift','','',NULL),
+('Volunteer_Work_Hours','Activity',NULL,CONCAT(UNHEX('01'), '57',UNHEX('01')),'Inline',1,7,0,'civicrm_value_volunteer_wor_13',0,NULL,NULL,0,2,'2020-09-16 02:38:09',0,1,'Volunteer Hours','','',NULL),
+('Volunteer_Request','Activity',NULL,CONCAT(UNHEX('01'), '61',UNHEX('01')),'Inline',1,8,1,'civicrm_value_volunteer_req_14',0,NULL,NULL,0,2,'2020-10-12 09:57:12',0,1,'Volunteer Request','','',''),
+('Police_Force','Activity',NULL,CONCAT(UNHEX('01'), '64',UNHEX('01')),'Inline',1,9,1,'civicrm_value_police_force_15',0,NULL,NULL,0,2,'2020-11-18 10:09:26',0,1,'Police Force','','','');
 
 SELECT @custom_group_id1 := max(id) from civicrm_custom_group where name = 'Volunteer_Information';
 SELECT @custom_group_id2 := max(id) from civicrm_custom_group where name = 'volunteer_commendation';
