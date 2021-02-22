@@ -256,6 +256,19 @@ CREATE TABLE `civicrm_value_volunteer_awa_11` (
   UNIQUE KEY `unique_entity_id` (`entity_id`),
   CONSTRAINT `FK_civicrm_value_volunteer_awa_11_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+                                       
+CREATE TABLE `civicrm_value_volunteering_12` (
+  `id` int(10) UNSIGNED NOT NULL COMMENT 'Default MySQL primary key',
+  `entity_id` int(10) UNSIGNED NOT NULL COMMENT 'Table that this extends',
+  `program_56` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `funder_57` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `division_58` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `location_59` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `job_60` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `type_of_request_85` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `duration_86` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `work_hours_90` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `civicrm_value_volunteer_wor_13` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Default MySQL primary key',
