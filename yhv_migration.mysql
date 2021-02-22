@@ -234,7 +234,7 @@ CREATE TABLE `civicrm_value_volunteer_inf_9` (
   CONSTRAINT `FK_civicrm_value_volunteer_inf_9_fi_080b8cc67e2abe45` FOREIGN KEY (`first_aid_cpr_certificate_98`) REFERENCES `civicrm_file` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_civicrm_value_volunteer_inf_9_tb_063dbe837ba316fc` FOREIGN KEY (`tb_test_verification_96`) REFERENCES `civicrm_file` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_civicrm_value_volunteer_inf_9_vu_e70913554e2f862c` FOREIGN KEY (`vulnerable_sector_check_verifica_97`) REFERENCES `civicrm_file` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10218 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `civicrm_value_volunteer_com_10` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Default MySQL primary key',
@@ -243,7 +243,7 @@ CREATE TABLE `civicrm_value_volunteer_com_10` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_entity_id` (`entity_id`),
   CONSTRAINT `FK_civicrm_value_volunteer_com_10_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 CREATE TABLE `civicrm_value_volunteer_awa_11` (
@@ -255,7 +255,7 @@ CREATE TABLE `civicrm_value_volunteer_awa_11` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_entity_id` (`entity_id`),
   CONSTRAINT `FK_civicrm_value_volunteer_awa_11_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `civicrm_value_volunteer_wor_13` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Default MySQL primary key',
@@ -265,7 +265,7 @@ CREATE TABLE `civicrm_value_volunteer_wor_13` (
   UNIQUE KEY `unique_entity_id` (`entity_id`),
   KEY `INDEX_month_93` (`month_93`),
   CONSTRAINT `FK_civicrm_value_volunteer_wor_13_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=37526 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `civicrm_value_volunteer_req_14` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Default MySQL primary key',
@@ -283,7 +283,7 @@ CREATE TABLE `civicrm_value_volunteer_req_14` (
  PRIMARY KEY (`id`),
  UNIQUE KEY `unique_entity_id` (`entity_id`),
  CONSTRAINT `FK_civicrm_value_volunteer_req_14_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=65560 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `civicrm_value_police_force_15` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Default MySQL primary key',
@@ -292,4 +292,4 @@ CREATE TABLE `civicrm_value_police_force_15` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_entity_id` (`entity_id`),
   CONSTRAINT `FK_civicrm_value_police_force_15_entity_id` FOREIGN KEY (`entity_id`) REFERENCES `civicrm_activity` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
