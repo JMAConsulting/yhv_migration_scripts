@@ -25,6 +25,26 @@ INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_activ
  (2,66,'Orientation Session',1,'Orientation Session', 66),
  (2,67,'HPCO Training (Hospice)',1,'HPCO Training (Hospice)', 67),
  (2,68,'Covid Test',1,'Covid Test', 68);
+ 
+INSERT INTO `civicrm_option_group` (`name`, `data_type`, `is_reserved`, `is_active`, `is_locked`, `title_en_US`, `description_en_US`) VALUES
+('birth_year_20200423191613', 'String', 0, 1, 0, 'Birth Year', NULL),
+('profession_20200423192154', 'String', 0, 1, 0, 'Profession', NULL),
+('location_20200501124107', 'String', 0, 1, 0, 'Location', NULL),
+('i_can_commit_myself_to_the_volun_20200501125240', 'String', 0, 1, 0, 'I can commit myself to the voluntary work for: 我答應參與義務工作直至', NULL),
+('division__20200501125826', 'String', 0, 1, 0, 'Division 所屬部門', NULL),
+('department__20200501130126', 'String', 0, 1, 0, 'Program', 'Sometimes called Department 單位'),
+('award_name_20200629180219', 'String', 0, 1, 0, 'Award Name', NULL),
+('job', 'String', 0, 1, 0, 'Job', 'Job'),
+('funder', 'String', 0, 1, 0, 'Funder', 'Funder'),
+('area_of_education__20200831180014', 'String', 0, 1, 0, 'Area of Education 學科背景', NULL),
+('how_did_you_learn_about_voluntee_20200831202427', 'String', 0, 1, 0, 'How did you learn about volunteer opportunities at Yee Hong? 您是從何途徑了解到頤康的義工機會的？', NULL),
+('languages_20200902142841', 'String', 0, 1, 0, 'Languages Yee Hong', NULL),
+('how_many_years_of_driving_experi_20200908114008', 'String', 0, 1, 0, 'How many years of driving experience do you have in Ontario?', NULL),
+('type_of_request_20200914090410', 'String', 0, 1, 0, 'Type Of Request', NULL),
+('award_for_month_20201009101408', 'String', 0, 1, 0, 'Award for month', NULL),
+('volunteer_status_20201105050430', 'String', 0, 1, 0, 'Volunteer Status', NULL),
+('police_force_providing_check_20201118101035', 'String', 0, 1, 0, 'Police Force Providing Check', NULL),
+('waiver_20201119082618', 'String', 0, 1, 0, 'Waiver', NULL);
 
 INSERT INTO `civicrm_custom_group` (
 `name`,
