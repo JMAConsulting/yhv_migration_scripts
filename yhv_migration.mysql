@@ -1,3 +1,5 @@
+INSERT INTO `civicrm_contact_type` (`id`, `name`, `image_URL`, `parent_id`, `is_active`, `is_reserved`, `label_en_US`, `description_en_US`, `label_en_CA`, `description_en_CA`, `label_zh_CN`, `description_zh_CN`, `label_zh_TW`, `description_zh_TW`) VALUES
+(4, 'Volunteer', NULL, 1, 1, 0, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL);
 
 INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`, `label_a_b_en_US`, `label_b_a_en_US`, `description_en_US`) VALUES
 ('Child 子／女', 'Child 子／女', NULL, NULL, NULL, NULL, NULL, 1, 'Child 子／女', 'Child 子／女', NULL),
@@ -268,7 +270,7 @@ INSERT INTO `civicrm_option_value` (`option_group_id`, `value`, `name`, `groupin
 (@og12, 'Sign Language 手語', 'Sign_Language_', NULL, NULL, 0, 17, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Sign Language 手語', ''),
 (@og12, 'Siyi/Sze Yup dialects 四邑話', 'Siyi_Sze_Yup_dialects_', NULL, NULL, 0, 18, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Siyi/Sze Yup dialects 四邑話', ''),
 (@og12, 'Spanish', 'Spanish', NULL, NULL, 0, 19, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Spanish', ''),
-(@og12, 'Taishanese/Toisanese 台山話', 'Taishanese_Toisanese_', NULL, NULL, 0, 20, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Taishanese/Toisanese 台山話', ''),
+(@og12, 'Taishanese/Toisanese 臺山話', 'Taishanese_Toisanese_', NULL, NULL, 0, 20, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Taishanese/Toisanese 臺山話', ''),
 (@og12, 'Tamil', 'Tamil', NULL, NULL, 0, 21, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Tamil', ''),
 (@og12, 'Teochew 潮汕話', 'Teochew_', NULL, NULL, 0, 22, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Teochew 潮汕話', ''),
 (@og12, 'Thai', 'Thai', NULL, NULL, 0, 23, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Thai', ''),
