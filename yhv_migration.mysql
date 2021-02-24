@@ -655,3 +655,5 @@ INSERT INTO `civicrm_volunteer_lookup` (`id`, `Funder`, `Location`, `Division`, 
 (51, 'Central East LHIN', 'Hospice Centre 寧安中心', 'Hospice 寧安中心', 'Hospice Program 寧安服務'),
 (52, 'No LHIN', 'Scarborough McNicoll Centre 士嘉堡麥瀝高中心', 'Consulting & Education 諮詢與教育', 'Training & Learning Centre 專業培訓中心'),
 (53, 'No LHIN', 'Scarborough McNicoll Centre 士嘉堡麥瀝高中心', 'Consulting & Education 諮詢與教育', 'Consulting 諮詢服務');
+                                       
+ALTER TABLE `civicrm_volunteer_lookup` ADD PRIMARY KEY (`id`);
