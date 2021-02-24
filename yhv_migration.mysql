@@ -1,5 +1,15 @@
-INSERT INTO `civicrm_contact_type` (`id`, `name`, `image_URL`, `parent_id`, `is_active`, `is_reserved`, `label_en_US`, `description_en_US`, `label_en_CA`, `description_en_CA`, `label_zh_CN`, `description_zh_CN`, `label_zh_TW`, `description_zh_TW`) VALUES
-(4, 'Volunteer', NULL, 1, 1, 0, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL);
+INSERT INTO `civicrm_contact_type` (`name`, `image_URL`, `parent_id`, `is_active`, `is_reserved`, `label_en_US`, `description_en_US`, `label_en_CA`, `description_en_CA`, `label_zh_CN`, `description_zh_CN`, `label_zh_TW`, `description_zh_TW`) VALUES
+('Volunteer', NULL, 1, 1, 0, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL);
+
+INSERT INTO `civicrm_dedupe_rule_group` (`contact_type`, `threshold`, `used`, `name`, `title`, `is_reserved`) VALUES
+('Individual', 15, 'General', 'Emergency_Rule_8', 'Emergency Rule', 0);
+
+SELECT @dupe := max(id) from civicrm_dedupe_rule_group where name = 'Emergency_Rule_8';
+
+INSERT INTO `civicrm_dedupe_rule` (`dedupe_rule_group_id`, `rule_table`, `rule_field`, `rule_length`, `rule_weight`) VALUES
+(@dupe, 'civicrm_phone', 'phone_numeric', NULL, 10),
+(@dupe, 'civicrm_contact', 'first_name', NULL, 6),
+(@dupe, 'civicrm_contact', 'last_name', NULL, 5);
 
 INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`, `label_a_b_en_US`, `label_b_a_en_US`, `description_en_US`) VALUES
 ('Child 子／女', 'Child 子／女', NULL, NULL, NULL, NULL, NULL, 1, 'Child 子／女', 'Child 子／女', NULL),
