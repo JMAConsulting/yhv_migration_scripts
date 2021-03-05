@@ -56,7 +56,8 @@ INSERT INTO `civicrm_option_group` (`name`, `data_type`, `is_reserved`, `is_acti
 ('award_for_month_20201009101408', 'String', 0, 1, 0, 'Award for month', NULL),
 ('volunteer_status_20201105050430', 'String', 0, 1, 0, 'Volunteer Status', NULL),
 ('police_force_providing_check_20201118101035', 'String', 0, 1, 0, 'Police Force Providing Check', NULL),
-('waiver_20201119082618', 'String', 0, 1, 0, 'Waiver', NULL);
+('waiver_20201119082618', 'String', 0, 1, 0, 'Waiver', NULL),
+('volunteer_locations', 'String', 0, 1, 0, 'Volunteer Locations', NULL);
 
 SELECT @og1 := max(id) from civicrm_option_group where name = 'birth_year_20200423191613';
 SELECT @og2 := max(id) from civicrm_option_group where name = 'profession_20200423192154';
@@ -76,6 +77,7 @@ SELECT @og15 := max(id) from civicrm_option_group where name = 'award_for_month_
 SELECT @og16 := max(id) from civicrm_option_group where name = 'volunteer_status_20201105050430';
 SELECT @og17 := max(id) from civicrm_option_group where name = 'police_force_providing_check_20201118101035';
 SELECT @og18 := max(id) from civicrm_option_group where name = 'waiver_20201119082618';
+SELECT @og19 := max(id) from civicrm_option_group where name = 'volunteer_locations';
 
 INSERT INTO `civicrm_option_value` (`option_group_id`, `value`, `name`, `grouping`, `filter`, `is_default`, `weight`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `domain_id`, `visibility_id`, `icon`, `color`, `label_en_US`, `description_en_US`) VALUES
 (@og1, 'Before 1950', 'Before_1950', NULL, NULL, 0, 1, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Before 1950', NULL),
@@ -321,7 +323,12 @@ INSERT INTO `civicrm_option_value` (`option_group_id`, `value`, `name`, `groupin
 (@og17, 'York Regional Police', 'York_Regional_Police', NULL, 0, 0, 3, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'York Regional Police', ''),
 (@og17, 'Durham Regional Police', 'Durham_Regional_Police', NULL, 0, 0, 4, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Durham Regional Police', ''),
 (@og17, 'Other regional police', 'Other_regional_police', NULL, 0, 0, 5, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Other regional police', ''),
-(@og18, 'Yes', 'I_have_read_and_agree_to_the_te', NULL, 0, 0, 1, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'I have read, understand and agree to the terms of the Confidentiality Agreement. 本人已閱讀，明白並同意這份保密協議書的各項條款。', '');
+(@og18, 'Yes', 'I_have_read_and_agree_to_the_te', NULL, 0, 0, 1, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'I have read, understand and agree to the terms of the Confidentiality Agreement. 本人已閱讀，明白並同意這份保密協議書的各項條款。', ''),
+(@og19, 'Scarborough McNicoll Centre 士嘉堡麥瀝高中心', 'Scarborough McNicoll Centre 士嘉堡麥瀝高中心', NULL, 0, 0, 1, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Scarborough McNicoll Centre 士嘉堡麥瀝高中心', NULL),
+(@og19, 'Markham Centre 萬錦中心', 'Markham Centre 萬錦中心', NULL, 0, 0, 2, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Markham Centre 萬錦中心', NULL),
+(@og19, 'Mississauga Centre 密西沙加中心', 'Mississauga Centre 密西沙加中心', NULL, 0, 0, 3, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Mississauga Centre 密西沙加中心', NULL),
+(@og19, 'Scarborough Finch Centre 士嘉堡芬治中心', 'Scarborough Finch Centre 士嘉堡芬治中心', NULL, 0, 0, 4, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Scarborough Finch Centre 士嘉堡芬治中心', NULL);
+
 
 
 INSERT INTO `civicrm_custom_group` (
