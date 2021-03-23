@@ -1,5 +1,5 @@
-INSERT INTO `civicrm_contact_type` (`name`, `image_URL`, `parent_id`, `is_active`, `is_reserved`, `label_en_US`, `description_en_US`, `label_en_CA`, `description_en_CA`, `label_zh_CN`, `description_zh_CN`, `label_zh_TW`, `description_zh_TW`) VALUES
-('Volunteer', NULL, 1, 1, 0, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL, 'Volunteer', NULL);
+INSERT INTO `civicrm_contact_type` (`name`, `image_URL`, `parent_id`, `is_active`, `is_reserved`, `label`, `description`) VALUES
+('Volunteer', NULL, 1, 1, 0, 'Volunteer', NULL);
 
 INSERT INTO `civicrm_dedupe_rule_group` (`contact_type`, `threshold`, `used`, `name`, `title`, `is_reserved`) VALUES
 ('Individual', 15, 'General', 'Emergency_Rule_8', 'Emergency Rule', 0);
@@ -11,7 +11,7 @@ INSERT INTO `civicrm_dedupe_rule` (`dedupe_rule_group_id`, `rule_table`, `rule_f
 (@dupe, 'civicrm_contact', 'first_name', NULL, 5),
 (@dupe, 'civicrm_contact', 'last_name', NULL, 5);
 
-INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`, `label_a_b_en_US`, `label_b_a_en_US`, `description_en_US`) VALUES
+INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a`, `contact_type_b`, `contact_sub_type_a`, `contact_sub_type_b`, `is_reserved`, `is_active`, `label_a_b`, `label_b_a`, `description`) VALUES
 ('Child 子／女', 'Child 子／女', NULL, NULL, NULL, NULL, NULL, 1, 'Child 子／女', 'Child 子／女', NULL),
 ('Friend 朋友', 'Friend 朋友', NULL, NULL, NULL, NULL, NULL, 1, 'Friend 朋友', 'Friend 朋友', NULL),
 ('Grandchild 孫子／孫女', 'Grandparent 祖父／祖母', NULL, NULL, NULL, NULL, NULL, 1, 'Grandchild 孫子／孫女', 'Grandparent 祖父／祖母', NULL),
@@ -24,7 +24,7 @@ INSERT INTO `civicrm_relationship_type` (`name_a_b`, `name_b_a`, `contact_type_a
 ('Volunteer From', 'Provides Volunteer', 'Individual', 'Organization', 'Volunteer', NULL, NULL, 1, 'Volunteer From', 'Provides Volunteer', NULL),
 ('Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL, NULL, NULL, NULL, NULL, 1, 'Grandparent 祖父／祖母', 'Grandchild 孫子／孫女', NULL);
 
-INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label_en_US`, `weight`) VALUES
+INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_active`,`label`, `weight`) VALUES
  (2,57,'Volunteer',1,'Volunteer', 57),
  (2,58,'volunteer_commendation',1,'Volunteer Award', 58),
  (2,59,'Reimbursed for Police Check',1,'Reimbursed for Police Check', 59),
@@ -38,7 +38,7 @@ INSERT INTO `civicrm_option_value` (`option_group_id`, `value`,`name`, `is_activ
  (2,67,'HPCO Training (Hospice)',1,'HPCO Training (Hospice)', 67),
  (2,68,'Covid Test',1,'Covid Test', 68);
  
-INSERT INTO `civicrm_option_group` (`name`, `data_type`, `is_reserved`, `is_active`, `is_locked`, `title_en_US`, `description_en_US`) VALUES
+INSERT INTO `civicrm_option_group` (`name`, `data_type`, `is_reserved`, `is_active`, `is_locked`, `title`, `description`) VALUES
 ('birth_year_20200423191613', 'String', 0, 1, 0, 'Birth Year', NULL),
 ('profession_20200423192154', 'String', 0, 1, 0, 'Profession', NULL),
 ('location_20200501124107', 'String', 0, 1, 0, 'Location', NULL),
@@ -79,7 +79,7 @@ SELECT @og17 := max(id) from civicrm_option_group where name = 'police_force_pro
 SELECT @og18 := max(id) from civicrm_option_group where name = 'waiver_20201119082618';
 SELECT @og19 := max(id) from civicrm_option_group where name = 'volunteer_locations';
 
-INSERT INTO `civicrm_option_value` (`option_group_id`, `value`, `name`, `grouping`, `filter`, `is_default`, `weight`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `domain_id`, `visibility_id`, `icon`, `color`, `label_en_US`, `description_en_US`) VALUES
+INSERT INTO `civicrm_option_value` (`option_group_id`, `value`, `name`, `grouping`, `filter`, `is_default`, `weight`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `domain_id`, `visibility_id`, `icon`, `color`, `label`, `description`) VALUES
 (@og1, 'Before 1950', 'Before_1950', NULL, NULL, 0, 1, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, 'Before 1950', NULL),
 (@og1, '1950 - 1959', '1950_1959', NULL, NULL, 0, 2, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, '1950 - 1959', NULL),
 (@og1, '1960 - 1969', '1960_1959', NULL, NULL, 0, 3, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, '1960 - 1969', NULL),
@@ -349,9 +349,9 @@ INSERT INTO `civicrm_custom_group` (
 `created_date` ,
 `is_reserved`,
 `is_public`,
-`title_en_US`,
-`help_pre_en_US`,
-`help_post_en_US`,
+`title`,
+`help_pre`,
+`help_post`,
 `icon`
 ) VALUES 
 ('Volunteer_Information','Individual',NULL,CONCAT(UNHEX('01'), 'Volunteer',UNHEX('01')),'Tab',0,2,1,'civicrm_value_volunteer_inf_9',0,NULL,NULL,0,NULL,NULL,0,1,'Volunteer Information','','','fa-handshake-o'),
@@ -371,7 +371,7 @@ SELECT @custom_group_id6 := max(id) from civicrm_custom_group where name = 'Volu
 SELECT @custom_group_id7 := max(id) from civicrm_custom_group where name = 'Police_Force';
 
 
-INSERT INTO `civicrm_custom_field` (`custom_group_id`, `name`, `data_type`, `html_type`, `default_value`, `is_required`, `is_searchable`, `is_search_range`, `weight`, `mask`, `attributes`, `javascript`, `is_active`, `is_view`, `options_per_line`, `text_length`, `start_date_years`, `end_date_years`, `date_format`, `time_format`, `note_columns`, `note_rows`, `column_name`, `option_group_id`, `filter`, `in_selector`, `label_en_US`, `help_pre_en_US`, `help_post_en_US`, `serialize`) VALUES
+INSERT INTO `civicrm_custom_field` (`custom_group_id`, `name`, `data_type`, `html_type`, `default_value`, `is_required`, `is_searchable`, `is_search_range`, `weight`, `mask`, `attributes`, `javascript`, `is_active`, `is_view`, `options_per_line`, `text_length`, `start_date_years`, `end_date_years`, `date_format`, `time_format`, `note_columns`, `note_rows`, `column_name`, `option_group_id`, `filter`, `in_selector`, `label`, `help_pre`, `help_post`, `serialize`) VALUES
 (@custom_group_id2, 'volunteer_project_id', 'Int', 'Text', NULL, 0, NULL, 0, 9, NULL, NULL, NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'volunteer_project_id_20', NULL, NULL, 0, 'Volunteer Project ID', NULL, NULL, 0),
 (@custom_group_id1, 'Birth_Year', 'String', 'Select', NULL, NULL, 1, 0, 20, NULL, NULL, NULL, 1, NULL, NULL, 255, NULL, NULL, NULL, NULL, 60, 4, 'birth_year_21', @og1, NULL, 0, 'Year of Birth 出生年份', NULL, NULL, 0),
 (@custom_group_id1, 'Age_18', 'Boolean', 'Radio', NULL, NULL, 1, 0, 21, NULL, NULL, NULL, 1, NULL, NULL, 255, NULL, NULL, NULL, NULL, 60, 4, 'age_18_22', NULL, NULL, 0, 'Age < 18 十八歲以下', NULL, NULL, 0),
