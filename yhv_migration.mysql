@@ -717,7 +717,7 @@ INSERT INTO `civicrm_navigation` (`domain_id`, `label`, `name`, `url`, `permissi
 (1, 'Long Service Awards', 'Long Service Awards', 'civicrm/report/instance/81?reset=1&force=1', 'access CiviReport', NULL, 247, 1, 0, 24, NULL),
 (1, 'List of active volunteers in the past calendar year', 'List of active volunteers in the past calendar year', 'civicrm/report/instance/59?reset=1&force=1', 'access CiviReport', NULL, 247, 1, 0, 25, NULL),
 (1, 'New Volunteer Request', 'New Volunteer Request', 'civicrm/report/instance/91?reset=1&force=1', 'access CiviReport', NULL, 247, 1, 0, 26, NULL),
-(1, 'Mailing Reports', 'Mailing Reports', 'http://staging.yhccivicrm.yeehong.com/wp-admin/admin.php?page=CiviCRM&q=civicrm%2Freport%2Flist&compid=4&reset=1', 'access CiviReport', 'AND', NULL, 1, 0, 111, NULL);
+(1, 'Mailing Reports', 'Mailing Reports', 'http://yhccivicrm.yeehong.com/wp-admin/admin.php?page=CiviCRM&q=civicrm%2Freport%2Flist&compid=4&reset=1', 'access CiviReport', 'AND', NULL, 1, 0, 111, NULL);
                                                                              
 SET FOREIGN_KEY_CHECKS=1;
                                        
